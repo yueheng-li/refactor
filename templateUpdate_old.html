@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>R-Item(Update)</title>
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- jquery ui-->
+    <link href="css/lib/jquery-ui.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="css/lib/bootstrap.min.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/lib/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/lib/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <form action="" id="createForm">
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                    <!-- fieldset -->
+                    <div class="templatePad form-inline">
+                        <fieldset class="fsStyle">
+                            <legend class="legendStyle">Gener</legend>
+                            <div class="row clearfix">
+                                <div class="col-md-6 column">
+                                    <label>Genre ID </label>
+                                    <input type="text" id="genreid" value="01001">
+                                </div>
+                                <div class="col-md-6 column">
+                                    <div class="row clearfix">
+                                        <div class="col-md-4 column" style="text-align:right;">
+                                            <label>Large genre </label>
+                                        </div>
+                                        <div class="col-md-4 column">
+                                            <input type="text" id="largegenre" value="Appliance">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row clearfix">
+                                <div class="col-md-6 column">
+                                    <label>Category </label>
+                                    <input type="text" id="category" value="Retail">
+                                </div>
+                                <div class="col-md-6 column">
+                                    <div class="row clearfix">
+                                        <div class="col-md-4 column" style="text-align:right;">
+                                            <label>Small genre </label>
+                                        </div>
+                                        <div class="col-md-4 column">
+                                            <input type="text" id="smallgenre" value="Air Conditioner">
+                                        </div>
+                                    </div>
+                                </div>
+                        </fieldset>
+                        </div>
+                        <!-- Genre -->
+                        <!-- fieldset -->
+                        <div class="templatePad form-inline">
+                            <fieldset class="fsStyle">
+                                <legend class="legendStyle">Template</legend>
+                                <div class="templatePad row form-inline">
+                                    <fieldset class="fsStyle">
+                                        <legend class="legendStyle">Template1</legend>
+                                        <div class="row clearfix">
+                                            <div class="col-md-4 column">
+                                                <label>Template Name </label>
+                                                <input styple="padding-left: 10px;" type="text" id="templateName" value="Air Conditioner made in Japan">
+                                            </div>
+                                            <div class="col-md-4 column">
+                                            </div>
+                                            <div class="col-md-4 column">
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row clearfix">
+                                            <div class="col-md-2 column right" style="text-align:right;">
+                                                <label>Effective date </label>
+                                            </div>
+                                            <div class="col-md-4 column">
+                                                <div class="row clearfix">
+                                                    <div class="col-md-4 column right" style="text-align:right;">
+                                                        <label>start date</label>
+                                                    </div>
+                                                    <div class="col-md-8 column">
+                                                        <input type="text" id="startDate" class="datepicker" value="2016/01/01">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 column">
+                                                <div class="row clearfix">
+                                                    <div class="col-md-3 column" style="text-align:right;">
+                                                        <label>end date </label>
+                                                    </div>
+                                                    <div class="col-md-9 column">
+                                                        <input class="datepicker" type="text" id="endDate" value="2016/11/01">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- item -->
+                                        <div class="templatePad row form-inline" id="item">
+                                            <fieldset class="fsStyle">
+                                                <legend class="legendStyle">Item1</legend>
+                                                <div class="row clearfix">
+                                                    <div class="col-md-4 column">
+                                                        <div class="row clearfix">
+                                                            <div class="col-md-4 column" style="text-align:right;">
+                                                                <label>Item Name </label>
+                                                            </div>
+                                                            <div class="col-md-8 column">
+                                                                <input styple="padding-left: 10px;" type="text" id="itemName" value="Function">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 column">
+                                                        <div class="row clearfix">
+                                                            <div class="col-md-9 column right" style="text-align:right;">
+                                                                <label>must entered</label>
+                                                            </div>
+                                                            <div class="col-md-3 column">
+                                                                <div class="row clearfix">
+                                                                    <div class="col-md-6 column">
+                                                                        Yes
+                                                                        <input type="radio" name="mustEntered" id="mustEntered" checked="checked">
+                                                                    </div>
+                                                                    <div class="col-md-6 column">
+                                                                        No
+                                                                        <input type="radio" name="mustEntered" id="mustEntered">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- entered -->
+                                                        <div class="row clearfix">
+                                                            <div class="col-md-9 column right" style="text-align:right;">
+                                                                <label>search</label>
+                                                            </div>
+                                                            <div class="col-md-3 column">
+                                                                <div class="row clearfix">
+                                                                    <div class="col-md-6 column">
+                                                                        Yes
+                                                                        <input type="radio" name="searchRadio" id="searchRadio" checked="checked">
+                                                                    </div>
+                                                                    <div class="col-md-6 column">
+                                                                        No
+                                                                        <input type="radio" name="searchRadio" id="searchRadio">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- search -->
+                                                    </div>
+                                                </div>
+                                                <!-- Item Name行 end -->
+                                                <div class="row clearfix">
+                                                    <div class="col-md-4 column">
+                                                        <div class="row clearfix">
+                                                            <div class="col-md-4 column" style="text-align:right;">
+                                                                <label>field </label>
+                                                            </div>
+                                                            <div class="col-md-8 column">
+                                                                <div class="row clearfix">
+                                                                    <div class="col-md-5 column">
+                                                                        <input type="radio" name="fieldRadio" id="fieldRadio" value="1" checked="1">check
+                                                                    </div>
+                                                                    <div class="col-md-7 column">
+                                                                        <input type="radio" name="fieldRadio" id="fieldRadio" value="2">radio button
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 column">
+                                                        <div class="row clearfix">
+                                                            <div class="col-md-2 column">
+                                                                <input type="radio" name="fieldRadio" id="fieldRadio" value="3">free text
+                                                            </div>
+                                                            <div class="col-md-2 column">
+                                                                <input type="radio" name="fieldRadio" id="fieldRadio" value="4">list
+                                                            </div>
+                                                            <div class="col-md-2 column">
+                                                                <input type="radio" name="fieldRadio" id="fieldRadio" value="5">number
+                                                            </div>
+                                                            <div class="col-md-2 column">
+                                                                <input type="radio" name="fieldRadio" id="fieldRadio" value="6">link
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- field Radio 行 end -->
+                                                <br>
+                                                <div id="radioShow1">
+                                                    <div class="row clearfix">
+                                                        <div class="col-md-4 column">
+                                                            <div class="row clearfix">
+                                                                <div class="col-md-4 column" style="text-align:right;">
+                                                                    <label>value1 </label>
+                                                                </div>
+                                                                <div class="col-md-8 column">
+                                                                    <input type="text" id="fieldValue1" value="除菌">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-8 column">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- value1 -->
+                                                    <div class="row clearfix" style="padding-top:10px;">
+                                                        <div class="col-md-4 column">
+                                                            <div class="row clearfix">
+                                                                <div class="col-md-4 column" style="text-align:right;">
+                                                                    <label>value2 </label>
+                                                                </div>
+                                                                <div class="col-md-8 column">
+                                                                    <input type="text" id="fieldValue2" value="除湿">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-8 column">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- value2 -->
+                                                    <div id="valueContent" class="clearfix">
+                                                    </div>
+                                                    <div class="row clearfix">
+                                                        <div class="col-md-1 column">
+                                                        </div>
+                                                        <div class="col-md-7 column">
+                                                            <input type="button" value="+" id="addValue"> add new value
+                                                        </div>
+                                                        <div class="col-md-4 column">
+                                                        </div>
+                                                    </div>
+                                                    <!-- addValue -->
+                                                </div>
+                                                <!-- radioShow1 -->
+                                                <div id="radioShow2">
+                                                    <div class="row clearfix">
+                                                        <div class="col-md-5 column">
+                                                            <div class="row clearfix">
+                                                                <div class="col-md-3 column" style="text-align:right;">
+                                                                    <label>value </label>
+                                                                </div>
+                                                                <div class="col-md-9 column">
+                                                                    value
+                                                                    <input type="text" id="fieldValue1">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-8 column">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 column">
+                                                            max num of characters
+                                                            <input type="text" id="maxnumofChar">
+                                                        </div>
+                                                    </div>
+                                                    <!-- value -->
+                                                </div>
+                                                <!-- radioShow2 -->
+                                                <div id="radioShow3">
+                                                    <div class="row clearfix">
+                                                        <div class="col-md-4 column">
+                                                            <div class="row clearfix">
+                                                                <div class="col-md-4 column" style="text-align:right;">
+                                                                    <label>value </label>
+                                                                </div>
+                                                                <div class="col-md-8 column">
+                                                                    text
+                                                                    <input type="text" id="fieldValue1">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-8 column">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 column">
+                                                            url
+                                                            <input type="text" id="maxnumofChar">
+                                                        </div>
+                                                    </div>
+                                                    <!-- value -->
+                                                </div>
+                                                <!-- radioShow3 -->
+                                            </fieldset>
+                                        </div>
+                                        <!-- Item1 information -->
+                                        <div id="content">
+                                        </div>
+                                        <div class="row clearfix">
+                                            <div class="col-md-1 column">
+                                            </div>
+                                            <div class="col-md-7 column">
+                                                <input type="button" value="+" id="addItem"> add new item
+                                            </div>
+                                            <div class="col-md-4 column">
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div id="templateContent">
+                                </div>
+                                <!-- Template1 information -->
+                                <div class="row clearfix">
+                                    <div class="col-md-2 column">
+                                    </div>
+                                    <div class="col-md-6 column">
+                                        <input type="button" value="+" id="addNewTemplate"> add new Template
+                                    </div>
+                                    <div class="col-md-4 column">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <!-- Template information -->
+                        <div class="row clearfix">
+                            <div class="col-md-1 column">
+                            </div>
+                            <div class="col-md-3 column">
+                                <button class="btn btn-lg btn-block" type="button" id="create">Update Template</button>
+                            </div>
+                            <div class="col-md-3 column">
+                            </div>
+                            <div class="col-md-3 column">
+                                <button class="btn btn-lg btn-block" type="button" id="back">Back to Template List</button>
+                            </div>
+                            <div class="col-md-1 column">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- sumit -->
+        </form>
+        </div>
+        <!-- /container -->
+        <div id="dialog" title="Confirmation Required">
+            コミットかどうかを確認ください。
+        </div>
+        <!-- template of value -->
+        <template id="templateValue">
+            <div class="clearfix" style="padding-top:10px;">
+                <div class="col-md-4 column">
+                    <div class="row clearfix">
+                        <div class="col-md-4 column" style="text-align:right;">
+                            <label>{valueItem}</label>
+                        </div>
+                        <div class="col-md-8 column">
+                            <input type="text" id="tempvalue">
+                        </div>
+                    </div>
+                    <div class="col-md-8 column">
+                    </div>
+                </div>
+            </div>
+        </template>
+        <!-- template of Item -->
+        <template id="templateItem">
+            <!-- item -->
+            <div class="templatePad form-inline" id="areaitem">
+                <fieldset class="fsStyle">
+                    <legend class="legendStyle"> {ItemName} </legend>
+                    <div class="row clearfix">
+                        <div class="col-md-4 column">
+                            <div class="row clearfix">
+                                <div class="col-md-4 column" style="text-align:right;">
+                                    <label>Item Name </label>
+                                </div>
+                                <div class="col-md-8 column">
+                                    <input styple="padding-left: 10px;" type="text" id="itemname">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 column">
+                            <div class="row clearfix">
+                                <div class="col-md-9 column right" style="text-align:right;">
+                                    <label>must entered</label>
+                                </div>
+                                <div class="col-md-3 column">
+                                    <div class="row clearfix">
+                                        <div class="col-md-6 column">
+                                            Yes
+                                            <input type="radio" name="itemmustEntered" id="itemmustEntered" checked="checked">
+                                        </div>
+                                        <div class="col-md-6 column">
+                                            No
+                                            <input type="radio" name="itemmustEntered" id="itemmustEntered">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- entered -->
+                            <div class="row clearfix">
+                                <div class="col-md-9 column right" style="text-align:right;">
+                                    <label>search</label>
+                                </div>
+                                <div class="col-md-3 column">
+                                    <div class="row clearfix">
+                                        <div class="col-md-6 column">
+                                            Yes
+                                            <input type="radio" name="itemsearchRadio" id="itemsearchRadio" checked="checked">
+                                        </div>
+                                        <div class="col-md-6 column">
+                                            No
+                                            <input type="radio" name="itemsearchRadio" id="itemsearchRadio">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- search -->
+                        </div>
+                    </div>
+                    <!-- Item Name行 end -->
+                    <div class="row clearfix">
+                        <div class="col-md-4 column">
+                            <div class="row clearfix">
+                                <div class="col-md-4 column" style="text-align:right;">
+                                    <label>field </label>
+                                </div>
+                                <div class="col-md-8 column">
+                                    <div class="row clearfix">
+                                        <div class="col-md-5 column">
+                                            <input type="radio" name="itemfieldRadio" id="itemfieldRadio" value="1" checked="1" onchange="changeOnRadio('item', '1')">check
+                                        </div>
+                                        <div class="col-md-7 column">
+                                            <input type="radio" name="itemfieldRadio" id="itemfieldRadio" value="2" onchange="changeOnRadio('item', '2')">radio button
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 column">
+                            <div class="row clearfix">
+                                <div class="col-md-2 column">
+                                    <input type="radio" name="itemfieldRadio" id="itemfieldRadio" value="3" onchange="changeOnRadio('item', '3')">free text
+                                </div>
+                                <div class="col-md-2 column">
+                                    <input type="radio" name="itemfieldRadio" id="itemfieldRadio" value="4" onchange="changeOnRadio('item', '4')">list
+                                </div>
+                                <div class="col-md-2 column">
+                                    <input type="radio" name="itemfieldRadio" id="itemfieldRadio" value="5" onchange="changeOnRadio('item', '5')">number
+                                </div>
+                                <div class="col-md-2 column">
+                                    <input type="radio" name="itemfieldRadio" id="itemfieldRadio" value="6" onchange="changeOnRadio('item', '6')">link
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- field Radio 行 end -->
+                    <br>
+                    <div id="itemradioShow1">
+                        <div class="row clearfix">
+                            <div class="col-md-4 column">
+                                <div class="row clearfix">
+                                    <div class="col-md-4 column" style="text-align:right;">
+                                        <label>value1 </label>
+                                    </div>
+                                    <div class="col-md-8 column">
+                                        <input type="text" id="itemfieldValue1" name="itemfieldValue1">
+                                    </div>
+                                </div>
+                                <div class="col-md-8 column">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- value1 -->
+                        <div class="row clearfix" style="padding-top:10px;">
+                            <div class="col-md-4 column">
+                                <div class="row clearfix">
+                                    <div class="col-md-4 column" style="text-align:right;">
+                                        <label>value2 </label>
+                                    </div>
+                                    <div class="col-md-8 column">
+                                        <input type="text" id="itemfieldValue2">
+                                    </div>
+                                </div>
+                                <div class="col-md-8 column">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- value2 -->
+                        <div id="itemvalueContent" class="clearfix">
+                        </div>
+                        <div class="row clearfix">
+                            <div class="col-md-1 column">
+                            </div>
+                            <div class="col-md-7 column">
+                                <input type="button" value="+" id="additemValue" onclick="addItemValue('item')"> add new value
+                            </div>
+                            <div class="col-md-4 column">
+                            </div>
+                        </div>
+                        <!-- addValue -->
+                    </div>
+                    <!-- radioShow1 -->
+                    <div id="itemradioShow2">
+                        <div class="row clearfix">
+                            <div class="col-md-5 column">
+                                <div class="row clearfix">
+                                    <div class="col-md-3 column" style="text-align:right;">
+                                        <label>value </label>
+                                    </div>
+                                    <div class="col-md-9 column">
+                                        value
+                                        <input type="text" id="itemsfieldValue1">
+                                    </div>
+                                </div>
+                                <div class="col-md-8 column">
+                                </div>
+                            </div>
+                            <div class="col-md-6 column">
+                                max num of characters
+                                <input type="text" id="itemmaxnumofChar">
+                            </div>
+                        </div>
+                        <!-- value -->
+                    </div>
+                    <!-- radioShow2 -->
+                    <div id="itemradioShow3">
+                        <div class="row clearfix">
+                            <div class="col-md-4 column">
+                                <div class="row clearfix">
+                                    <div class="col-md-4 column" style="text-align:right;">
+                                        <label>value </label>
+                                    </div>
+                                    <div class="col-md-8 column">
+                                        text
+                                        <input type="text" id="itemfieldValue1">
+                                    </div>
+                                </div>
+                                <div class="col-md-8 column">
+                                </div>
+                            </div>
+                            <div class="col-md-4 column">
+                                url
+                                <input type="text" id="itemmaxnumofChar">
+                            </div>
+                        </div>
+                        <!-- value -->
+                    </div>
+                    <!-- radioShow3 -->
+                </fieldset>
+            </div>
+            <!-- Item1 information -->
+        </template>
+        <template id="template">
+            <div class="form-inline" style="margin-left: 10px;margin-right: 10px;">
+                <fieldset class="fsStyle">
+                    <legend class="legendStyle">{TemplateName}</legend>
+                    <div class="row clearfix">
+                        <div class="col-md-4 column">
+                            <label>Template Name </label>
+                            <input styple="padding-left: 10px;" type="text" id="templateAName">
+                        </div>
+                        <div class="col-md-4 column right" style="text-align:right;">
+                            <label>Effective date </label>
+                        </div>
+                        <div class="col-md-4 column">
+                            <div class="row clearfix">
+                                <div class="col-md-4 column right" style="text-align:right;">
+                                    <label>start date</label>
+                                </div>
+                                <div class="col-md-8 column">
+                                    <input type="text" id="templateAstartDate" class="datepicker">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row clearfix">
+                        <div class="col-md-4 column">
+                        </div>
+                        <div class="col-md-4 column">
+                        </div>
+                        <div class="col-md-4 column">
+                            <div class="row clearfix">
+                                <div class="col-md-4 column" style="text-align:right;">
+                                    <label>end date </label>
+                                </div>
+                                <div class="col-md-8 column">
+                                    <input class="datepicker" type="text" id="templateAendDate">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item -->
+                    <div class="templatePad row form-inline" id="item">
+                        <fieldset class="fsStyle">
+                            <legend class="legendStyle">Item1</legend>
+                            <div class="row clearfix">
+                                <div class="col-md-4 column">
+                                    <div class="row clearfix">
+                                        <div class="col-md-4 column" style="text-align:right;">
+                                            <label>Item Name </label>
+                                        </div>
+                                        <div class="col-md-8 column">
+                                            <input styple="padding-left: 10px;" type="text" id="templateAitemName">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 column">
+                                    <div class="row clearfix">
+                                        <div class="col-md-9 column right" style="text-align:right;">
+                                            <label>must entered</label>
+                                        </div>
+                                        <div class="col-md-3 column">
+                                            <div class="row clearfix">
+                                                <div class="col-md-6 column">
+                                                    Yes
+                                                    <input type="radio" name="templateAmustEntered" id="templateAmustEntered" checked="checked">
+                                                </div>
+                                                <div class="col-md-6 column">
+                                                    No
+                                                    <input type="radio" name="templateAmustEntered" id="templateAmustEntered">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- entered -->
+                                    <div class="row clearfix">
+                                        <div class="col-md-9 column right" style="text-align:right;">
+                                            <label>search</label>
+                                        </div>
+                                        <div class="col-md-3 column">
+                                            <div class="row clearfix">
+                                                <div class="col-md-6 column">
+                                                    Yes
+                                                    <input type="radio" name="templateAsearchRadio" id="templateAsearchRadio" checked="checked">
+                                                </div>
+                                                <div class="col-md-6 column">
+                                                    No
+                                                    <input type="radio" name="templateAsearchRadio" id="templateAsearchRadio">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- search -->
+                                </div>
+                            </div>
+                            <!-- Item Name行 end -->
+                            <div class="row clearfix" id="areatemplateAItem">
+                                <div class="col-md-4 column">
+                                    <div class="row clearfix">
+                                        <div class="col-md-4 column" style="text-align:right;">
+                                            <label>field </label>
+                                        </div>
+                                        <div class="col-md-8 column">
+                                            <div class="row clearfix">
+                                                <div class="col-md-5 column">
+                                                    <input type="radio" name="templateAitemfieldRadio" id="templateAitemfieldRadio" value="1" checked="1" onchange="changeOnRadio('templateAitem')">check
+                                                </div>
+                                                <div class="col-md-7 column">
+                                                    <input type="radio" name="templateAitemfieldRadio" id="templateAitemfieldRadio" value="2" onchange="changeOnRadio('templateAitem')">radio button
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 column">
+                                    <div class="row clearfix">
+                                        <div class="col-md-2 column">
+                                            <input type="radio" name="templateAitemfieldRadio" id="templateAitemfieldRadio" value="3" onchange="changeOnRadio('templateAitem')">free text
+                                        </div>
+                                        <div class="col-md-2 column">
+                                            <input type="radio" name="templateAitemfieldRadio" id="templateAitemfieldRadio" value="4" onchange="changeOnRadio('templateAitem')">list
+                                        </div>
+                                        <div class="col-md-2 column">
+                                            <input type="radio" name="templateAitemfieldRadio" id="templateAitemfieldRadio" value="5" onchange="changeOnRadio('templateAitem')">number
+                                        </div>
+                                        <div class="col-md-2 column">
+                                            <input type="radio" name="templateAitemfieldRadio" id="templateAitemfieldRadio" value="6" onchange="changeOnRadio('templateAitem')">link
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- field Radio 行 end -->
+                            <br>
+                            <div id="templateAitemradioShow1">
+                                <div class="row clearfix">
+                                    <div class="col-md-4 column">
+                                        <div class="row clearfix">
+                                            <div class="col-md-4 column" style="text-align:right;">
+                                                <label>value1 </label>
+                                            </div>
+                                            <div class="col-md-8 column">
+                                                <input type="text" id="templateAfieldValue1">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 column">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- value1 -->
+                                <div class="row clearfix" style="padding-top:10px;">
+                                    <div class="col-md-4 column">
+                                        <div class="row clearfix">
+                                            <div class="col-md-4 column" style="text-align:right;">
+                                                <label>value2 </label>
+                                            </div>
+                                            <div class="col-md-8 column">
+                                                <input type="text" id="templateAfieldValue2">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 column">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- value2 -->
+                                <div id="templateAvalueContent" class="clearfix">
+                                </div>
+                                <div class="row clearfix">
+                                    <div class="col-md-1 column">
+                                    </div>
+                                    <div class="col-md-7 column">
+                                        <input type="button" value="+" id="additemValue" onclick="addItemValueExt('templateA')"> add new value
+                                    </div>
+                                    <div class="col-md-4 column">
+                                    </div>
+                                </div>
+                                <!-- addValue -->
+                            </div>
+                            <!-- radioShow1 -->
+                            <div id="templateAitemradioShow2">
+                                <div class="row clearfix">
+                                    <div class="col-md-5 column">
+                                        <div class="row clearfix">
+                                            <div class="col-md-3 column" style="text-align:right;">
+                                                <label>value </label>
+                                            </div>
+                                            <div class="col-md-9 column">
+                                                value
+                                                <input type="text" id="templateAMfieldValue1">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 column">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 column">
+                                        max num of characters
+                                        <input type="text" id="templateAmaxnumofChar">
+                                    </div>
+                                </div>
+                                <!-- value -->
+                            </div>
+                            <!-- radioShow2 -->
+                            <div id="templateAitemradioShow3">
+                                <div class="row clearfix">
+                                    <div class="col-md-4 column">
+                                        <div class="row clearfix">
+                                            <div class="col-md-4 column" style="text-align:right;">
+                                                <label>value </label>
+                                            </div>
+                                            <div class="col-md-8 column">
+                                                text
+                                                <input type="text" id="templateAUfieldValue1">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 column">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 column">
+                                        url
+                                        <input type="text" id="templateAmaxnumofChar">
+                                    </div>
+                                </div>
+                                <!-- value -->
+                            </div>
+                            <!-- radioShow3 -->
+                        </fieldset>
+                    </div>
+                    <!-- Item1 information -->
+                    <div id="templateAcontent">
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-md-1 column">
+                        </div>
+                        <div class="col-md-7 column">
+                            <input type="button" value="+" id="addItem" onclick="addItemExt('templateA')"> add new item
+                        </div>
+                        <div class="col-md-4 column">
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <!-- Template information -->
+        </template>
+        <script src='js/lib/jquery-1.12.4.min.js'></script>
+        <script src='js/lib/jquery-ui.min.js'></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="js/lib/ie10-viewport-bug-workaround.js"></script>
+        <script src='js/common.js'></script>
+        <script src='js/lib/datepicker.js'></script>
+        <script src='js/utils.js'></script>
+        <script src='js/create.js'></script>
+</body>
+
+</html>

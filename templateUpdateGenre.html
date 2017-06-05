@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>R-Item</title>
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/buttons.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="css/lib/bootstrap.min.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/lib/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/lib/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <fieldset class="fsStyle">
+            <br>
+            <div class="row clearfix">
+                <div class="col-md-8 column">
+                </div>
+                <div class="col-md-2 column">
+                    <aside class='arrow'><span class="retangleC">1.ジャンル選択</span></aside>
+                </div>
+                <div class="col-md-2 column">
+                    <aside class='arrowGray'><span class="retangleGrayC">2.テンプレート作成</span></aside>
+                </div>
+               
+            </div>
+
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                    <!-- fieldset -->
+                    <div class="genrePad row form-inline" >
+
+                        <!-- Genre -->
+                        <!-- fieldset -->
+                        <div id="genreTemplateId1">
+                        <fieldset class="fsStyle">
+                            <legend class="legendStyle">ジャンル1</legend>
+                            <div class="row clearfix">
+                                <div class="col-md-9 column ">
+                                    <table class=" table table-bordered table-hover table-condensed table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    ジャンルID
+                                                </th>
+                                                <th>
+                                                    Lv0
+                                                </th>
+                                                <th>
+                                                    Lv1
+                                                </th>
+                                                <th>
+                                                    Lv2
+                                                </th>
+                                                <th>
+                                                    Lv3
+                                                </th>
+                                                <th>
+                                                    Lv4
+                                                </th>
+                                                <th>
+                                                    Lv5
+                                                </th>   
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    10101
+                                                </td>
+                                                <td>
+                                                    小売
+                                                </td>
+                                                <td>
+                                                    家電
+                                                </td>
+                                                <td>
+                                                    エアコン
+                                                </td>
+                                                <td>
+                                                    N/A
+                                                </td>
+                                                <td>
+                                                    N/A
+                                                </td>
+                                                <td>
+                                                    N/A
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-md-3 column">
+                                    <br>
+                                    <input type="button" value="-" id="deleteGenre" class="r-page-btn valueButton" onclick="delGener('genreTemplateId1')">
+                                    <label>ジャンルを削除</label>
+                                </div>
+                            </div>
+                        </fieldset>
+                        </div>
+
+                        <!-- genre 2 -->
+                        <div class="genrePad row form-inline" id="genreTemplateId2">
+                            <fieldset class="fsStyle">
+                                <legend class="legendStyle">ジャンル2</legend>
+                                <!-- genre search area  -->
+                                <fieldset class="fsStyle">
+                                    <legend class="legendStyle">ジャンル検索</legend>
+                                        <div class="row conditionrow">
+                                            <div class="col-md-12 column">                              
+                                                <div class="col-md-1 column" style="padding:0px;">
+                                                    <label>ジャンル</label>
+                                                </div>                              
+                                                <div class="col-md-11 column">
+                                                    <div class="row clearfix">
+                                                        <div class="col-md-12 column" >
+                                                            <div class="col-md-2 column form-group" style="padding-right:0px;padding-top:3px">
+                                                                <label for="Level0">Lv0</label>
+                                                                <select id="Level0" class="levelSelect">
+                                                                   <option>LV01</option>
+                                                                   <option>LV02</option>
+                                                                </select>
+                                                            </div>
+                                                    
+                                                            <div class="col-md-2 column form-group" style="padding:3px;">
+                                                                <label for="Level1">Lv1</label>
+                                                                <select id="Level1" class="levelSelect">
+                                                                   <option>LV11</option>
+                                                                   <option>LV12</option>
+                                                                </select>
+                                                            </div>
+                                                
+                                                            <div class="col-md-2 column form-group" style="padding:3px;">
+                                                                <label for="Level2">Lv2</label>
+                                                                <select id="Level2" class="levelSelect">
+                                                                   <option>Largegenre1</option>
+                                                                   <option>Largegenre2</option>
+                                                                </select>                                       
+                                                            </div>
+                                                    
+                                                            <div class="col-md-2 column form-group" style="padding:3px;">
+                                                                <label for="Level3">Lv3</label>
+                                                                <select id="Level3" class="levelSelect">
+                                                                   <option>Largegenre1</option>
+                                                                   <option>Largegenre2</option>
+                                                                </select>                                       
+                                                            </div>
+
+                                                            <div class="col-md-2 column form-group" style="padding:3px;">
+                                                                <label for="Level4">Lv4</label>
+                                                                <select id="Level4" class="levelSelect">
+                                                                   <option>Largegenre1</option>
+                                                                   <option>Largegenre2</option>
+                                                                </select>                                           
+                                                            </div>
+
+                                                            <div class="col-md-2 column form-group" style="padding:3px;">
+                                                                <label for="Level5">Lv5</label>
+                                                                <select id="Level5" class="levelSelect">
+                                                                   <option>Largegenre1</option>
+                                                                   <option>Largegenre2</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>  
+                                                </div>                                                              
+                                            </div>
+                                        </div>
+                                        <div class="row conditionrow">
+                                            <div class="col-md-12 column"> 
+                                                <div class="col-md-1 column" style="padding:0px;">
+                                                    <label >ジャンルID</label>
+                                                </div>  
+                                                <div class="col-md-11 column">
+                                                    <div class="row conditionrow">
+                                                        <div class="col-md-12 column">
+                                                        <div class="col-md-6 column">
+                                                            <input type="text" class="searchCon" id="genreIdsearch" style="width:100%">
+                                                        </div>
+                                                        <div class="col-md-3 column"> 
+                                                        </div>
+                                                        <div class="col-md-3 column"> 
+                                                            <button id="searchbutton" type="button">検索</button>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </fieldset><!-- genre search area end -->
+
+                                <!-- genre area -->
+                                <fieldset class="fsStyle">
+                                    <legend class="legendStyle">ジャンル検索結果</legend>
+                                        <div class="row clearfix">
+                                            <div class="col-md-12 column">
+                                                <table class="table table-bordered table-hover table-condensed table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>
+                                                                ジャンルID
+                                                            </th>
+                                                            <th>
+                                                                Lv0
+                                                            </th>
+                                                            <th>
+                                                                Lv1
+                                                            </th>
+                                                            <th>
+                                                                Lv2
+                                                            </th>
+                                                            <th>
+                                                                Lv3
+                                                            </th>
+                                                            <th>
+                                                                Lv4
+                                                            </th>
+                                                            <th>
+                                                                Lv5
+                                                            </th>   
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                10101
+                                                            </td>
+                                                            <td>
+                                                                小売
+                                                            </td>
+                                                            <td>
+                                                                家電
+                                                            </td>
+                                                            <td>
+                                                                エアコン
+                                                            </td>
+                                                            <td>
+                                                                ....
+                                                            </td>
+                                                            <td>
+                                                                ....
+                                                            </td>
+                                                            <td>
+                                                                ....
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                10101
+                                                            </td>
+                                                            <td>
+                                                                小売
+                                                            </td>
+                                                            <td>
+                                                                家電
+                                                            </td>
+                                                            <td>
+                                                                エアコン
+                                                            </td>
+                                                            <td>
+                                                                ....
+                                                            </td>
+                                                            <td>
+                                                                ....
+                                                            </td>
+                                                            <td>
+                                                                ....
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                </fieldset><!-- genre area end -->
+                            </fieldset>
+                        </div>
+                        <div id="genreContent">
+                        </div>
+
+                        <!-- Template1 information -->
+                        <div class="templatePad row clearfix">
+                            <div class="col-md-6 column">
+                                <div class=" templatePad row clearfix" >
+                                    <div class="col-md-7 column">  
+                                        <input type="button" value="+" id="addNewTemplate" class="r-page-btn templateButton" onclick="addNewGenre('')">
+                                        <label>ジャンルを追加</label>
+                                    </div> 
+                                    <div class="col-md-5 column" style="padding-left: 8px;">   
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="col-md-6 column">
+                            </div>
+                        </div>
+                        <br>
+
+
+                    </div>
+                </div>
+            </fieldset>
+            <!-- detail -->
+            <div class="row clearfix" id="detail">
+                <div class="col-md-3 column">
+                    <button class="btn-lg btn-block r-page-btn button-glow" type="button" id="back2TemplateLst">テンプレート一覧に戻る</button>
+                </div>
+                <div class="col-md-5 column">
+                </div>
+                <div class="col-md-4 column">
+                    <button class="btn-lg btn-block r-page-btn button-glow" type="button" id="confirmUpdate">アイテム編集に進む</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- template of value -->
+        <template id="genreTemplate">
+            <!-- genre 2 -->
+            <div class="genrePad row form-inline" id="tGenreTemplateId">
+                <fieldset class="fsStyle">
+                    <legend class="legendStyle">{GenreName}</legend>
+                    <!-- genre search area  -->
+                    <fieldset class="fsStyle">
+                        <legend class="legendStyle">ジャンル検索</legend>
+                            <div class="row conditionrow">
+                                <div class="col-md-12 column">                              
+                                    <div class="col-md-1 column" style="padding:0px;">
+                                        <label>ジャンル</label>
+                                    </div>                              
+                                    <div class="col-md-11 column">
+                                        <div class="row clearfix">
+                                            <div class="col-md-12 column" >
+                                                <div class="col-md-2 column form-group" style="padding-right:0px;padding-top:3px">
+                                                    <label for="Level0">Lv0</label>
+                                                    <select id="Level0" class="levelSelect">
+                                                       <option>LV01</option>
+                                                       <option>LV02</option>
+                                                    </select>
+                                                </div>
+                                        
+                                                <div class="col-md-2 column form-group" style="padding:3px;">
+                                                    <label for="Level1">Lv1</label>
+                                                    <select id="Level1" class="levelSelect">
+                                                       <option>LV11</option>
+                                                       <option>LV12</option>
+                                                    </select>
+                                                </div>
+                                    
+                                                <div class="col-md-2 column form-group" style="padding:3px;">
+                                                    <label for="Level2">Lv2</label>
+                                                    <select id="Level2" class="levelSelect">
+                                                       <option>Largegenre1</option>
+                                                       <option>Largegenre2</option>
+                                                    </select>                                       
+                                                </div>
+                                        
+                                                <div class="col-md-2 column form-group" style="padding:3px;">
+                                                    <label for="Level3">Lv3</label>
+                                                    <select id="Level3" class="levelSelect">
+                                                       <option>Largegenre1</option>
+                                                       <option>Largegenre2</option>
+                                                    </select>                                       
+                                                </div>
+
+                                                <div class="col-md-2 column form-group" style="padding:3px;">
+                                                    <label for="Level4">Lv4</label>
+                                                    <select id="Level4" class="levelSelect">
+                                                       <option>Largegenre1</option>
+                                                       <option>Largegenre2</option>
+                                                    </select>                                           
+                                                </div>
+
+                                                <div class="col-md-2 column form-group" style="padding:3px;">
+                                                    <label for="Level5">Lv5</label>
+                                                    <select id="Level5" class="levelSelect">
+                                                       <option>Largegenre1</option>
+                                                       <option>Largegenre2</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                    </div>                                                              
+                                </div>
+                            </div>
+                            <div class="row conditionrow">
+                                <div class="col-md-12 column"> 
+                                    <div class="col-md-1 column" style="padding:0px;">
+                                        <label >ジャンルID</label>
+                                    </div>  
+                                    <div class="col-md-11 column">
+                                        <div class="row conditionrow">
+                                            <div class="col-md-12 column">
+                                            <div class="col-md-6 column">
+                                                <input type="text" class="searchCon" id="genreIdsearch" style="width:100%">
+                                            </div>
+                                            <div class="col-md-3 column"> 
+                                            </div>
+                                            <div class="col-md-3 column"> 
+                                                <button id="searchbutton" type="button">検索</button>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </fieldset><!-- genre search area end -->
+
+                    <!-- genre area -->
+                    <fieldset class="fsStyle">
+                        <legend class="legendStyle">ジャンル検索結果</legend>
+                            <div class="row clearfix">
+                                <div class="col-md-12 column">
+                                    <table class="table table-bordered table-hover table-condensed table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    ジャンルID
+                                                </th>
+                                                <th>
+                                                    Lv0
+                                                </th>
+                                                <th>
+                                                    Lv1
+                                                </th>
+                                                <th>
+                                                    Lv2
+                                                </th>
+                                                <th>
+                                                    Lv3
+                                                </th>
+                                                <th>
+                                                    Lv4
+                                                </th>
+                                                <th>
+                                                    Lv5
+                                                </th>   
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                    </fieldset><!-- genre area end -->
+                    <div class="templatePad row form-inline">
+                        <div class="col-md-6 column">
+                        </div>
+                        <div class="col-md-6 column">
+                            <div class="row clearfix" >
+                                <div class="col-md-3 column">
+                                </div>
+                                <div class="col-md-4 column" style="padding-left: 12px;" >
+                                    
+                                </div>
+                                <div class="col-md-5 column">
+                                    <input type="button" value="-" id="delTemplate" class=" r-page-btn templateButton " onclick="delGener('tGenreTemplateId')">
+                                    <label>ジャンルを削除</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </template>
+
+        <!-- /container -->
+        <script src='js/lib/jquery.js'></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="js/lib/ie10-viewport-bug-workaround.js"></script>
+        <script src='js/common.js'></script>
+        <script src='js/updateGenre.js'></script>
+        <script src='ts/makeTemplate.js'></script>
+</body>
+
+</html>
